@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DON BOSCO BAGUIO</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="exercise13.css.css">
+    </head>
+    <body>
+        <nav>
+            <a class="active">CONTACT</a>
+            <a>LOGIN</a>
+            <a>LANGUAGE</a>
+            <a>SEARCH</a>
+        </nav>
+        
+        <header>
+            <img src="images/logo.png" class="logo">
+            <h1><b>DON BOSCO HIGH SCHOOL</b></h1>
+            <ul>
+                <li><a>ABOUT</a></li>
+                <li><a>SCHOOL</a></li>
+                <li><a>STUDENTS</a></li>
+                <li><a>PARENTS & COMMUNITY</a></li>
+            </ul>
+        </header>
+        <section>
+        <div class="mySlides fade">
+            <img src="images/2.jpg">
+            <div class="text"><b>WELCOME TO <br> DON BOSCO</b></div>
+            <div class="text2">Be Honest●Be Clean●Be Kind●Be Self-Disciplined●Be Hard-Working</div>
+            </div>
+            
+        <div class="mySlides fade">
+            <img src="images/8.jpg" width="100%" height="100%">
+        <div class="text"><b>WE TEACH AS ONE! <br> WE LEAD AS ONE!</b></div>
+        <div class="text2"></div>
+        </div>
+            
+        <div class="mySlides fade">
+            <img src="images/9.jpg">
+            <div class="text"></div>
+            <div class="text2"></div>
+        </div>
+            
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+        
+        <br>
+        <div id="dots">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        </section>
+
+        <article>  
+            <div class="box">
+                <img src="images/enrollyourchild.png">
+                <br><br>
+                <a>ENROLL YOUR CHILD NOW</a>
+            </div>
+            <div class="box">
+                <img src="images/careers.jpg">
+                <br><br>
+                <a>CAREERS</a>
+            </div>
+            <div class="box">
+                <img src="images/activities.png">
+                <br><br>
+                <a>EXTRA-CURRICULAR ACTIVITIES</a>
+            </div>
+            <div class="box">
+                <img src="images/calendar.png">
+                <br><br>
+                <a>CALENDAR</a>
+            </div>
+        </article>
+        <aside>
+        <h2>NEWS AND EVENTS</h2>
+        <section id="aside">
+            <img src="images/poster.jpg">
+            <p>Congratulations to Ms. Jessica Estrada for representing St. John Bosco Parish/ Don Bosco in the Poster-Making Contest. <br> Organized by the commission on youth with the theme: "God's Words Restores, the continuance of the National Bible Month Celebration".
+                <br> Held last February 28, 2021. 
+                <br> The Bosconian Family is proud of your achievement👏👏👏 Keep up the good work! 💌  
+                <br> Entry # 15- 2nd place 😊🥈👏</p>
+        </section>
+        </aside>
+        <hr>
+
+        <footer>
+        <section id="address">
+            <h3>DON BOSCO HIGH SCHOOL</h3>
+            <p>57 MANUEL ROXAS, BAGUIO CITY, 2602</p>
+            <p>PHONE: 442-87-58</p>
+            <p>OFFICE HOURS: M-F 8:00 AM - 5:00 PM</p>
+        </section>
+        <section id="media">
+            <img src="images/mail.png">
+            <img src="images/tweeter.png">
+            <img src="images/facebook.png">
+        </section>
+        <br><br>
+        <section id="disclaimer">
+            <a>Disclaimer | Site Map</a>
+        </section>
+        </footer>
+
+        <script>
+        var slideIndex = 1;
+            showSlides(slideIndex);
+            
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+         }
+            
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+
+    </body>
+    </html>
